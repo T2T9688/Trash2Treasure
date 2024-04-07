@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+
+            height: 100vh;
+            overflow-x: hidden;
+
+        }
+
+        .container {
+            background-image: url(contact\ \(1\).svg);
+            background-size: cover;
+        }
+
+
+        .content {
+            padding: 150px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+        }
+
+        .phone {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+        }
+
+        .pn {
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 20px;
+        }
+
+        .em {
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+            background: transparent;border: 2px solid rgba(255, 255, 255, 0.2);backdrop-filter: blur(20px);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 20px;
+            margin-left: 30px;
+            margin-right: 20px;
+            margin-top: 20px;
+        }
+
+        .loc {
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: transparent;border: 2px solid rgba(255, 255, 255, 0.2);backdrop-filter: blur(20px);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+
+        .pn p {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+
+        .em p {
+
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.3rem;
+            /* display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin-top: 20px;
+
+            text-align: center;
+            font-size: 1.3rem; */
+
+        }
+
+        .loc p {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.3rem;
+
+        }
+
+        .feedback {
+            margin-top: 100px;
+            display: flex;
+            flex-wrap: wrap;
+
+
+            justify-content: space-evenly;
+            /* margin-top: 250px; */
+
+
+        }
+
+        .feedima {
+
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+
+
+            /* display: flex;
+            flex-direction: row;
+            flex-wrap: wrap; */
+        }
+
+        .feed {
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+            margin-top: 80px;
+            margin-right: 30px;
+            border-radius: 10px;
+            border: 1px solid #31b44b;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            /* margin-top: 80px;
+            margin-left: 50px;
+            margin-right: 50px ;
+            border: 2px solid pink;
+            border-radius: 20px;
+            padding: 50px; */
+            /* width: auto; */
+            /* height: auto*/
+        }
+
+        .name {
+            height: 2rem;
+            width: 400px;
+            border-radius: 10px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .email {
+            height: 2rem;
+            width: 400px;
+            border-radius: 10px;
+            margin: 20px;
+            
+            text-align: center;
+
+        }
+
+        .phonenum {
+            height: 2rem;
+            width: 400px;
+            border-radius: 10px;
+            margin: 20px;
+            text-align: center;
+
+        }
+
+        .boxfeed {
+            /* height: 2rem; */
+            width: 400px;
+            border-radius: 10px;
+            margin: 20px;
+            border: 2px solid black;
+            text-align: center;
+
+        }
+
+        .btn {
+            margin-left: 6px;
+            padding: 10px;
+            height: 3rem;
+            width: auto;
+            border-radius: 10px;
+            background-color: #31b44b;
+            color: #fff;
+            font-size: 1rem;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <div class="content">
+            <div class="phone">
+
+                <div class="pn">
+
+                    <img src="phone2.png" height="100px">
+                    <p>Phone</p>
+                    <p>9658745545</p>
+
+                </div>
+                <div class="em">
+
+                    <img src="email2.png" height="100px">
+                    <p>E-mail</p>
+                    <p>trashtotreasue@gmail.com</p>
+
+                </div>
+                <div class="loc">
+
+                    <img src="loc2.png" height="100px">
+                    <p>Location</p>
+                    <p> chikhli , pimpri-chinchwad ,pune - 411062</p>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="feedback">
+                <!-- <div class="feedima">
+                    <img src="contact (1).svg" height="700px" id="feedimg">
+                </div> -->
+                <form action="https://formsubmit.co/trash2treasure9688@gmail.com" method="POST">
+                <div class="feed">
+                    <p> Name:</p><input type="text" class="name" placeholder="Name">
+                    <p>Email:</p><input type="email" class="email" placeholder="Email ">
+                    <p>Mobile Number</p>
+                    <input type="tel" class="phonenum" name="Phonenumber" placeholder="Phone no." pattern="[0-9]{10}" required><br>                  
+                    <p>Feedback</p>
+
+                    <textarea name="comment" class="boxfeed " cols="30" rows="8" placeholder=" Send Your Feedback"></textarea>
+                    <input type="submit" class="btn" value="Send Feedback">
+                </div>
+                </form>
+            </div>
+        </div> 
+    </div>
+
+    </div>
+</body>
+
+</html>

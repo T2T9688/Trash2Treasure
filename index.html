@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trash To Treasure</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="leaf.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        .logo1{display: none;}
+        .accordion {
+            background-color: #fff;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 22px;
+            font-weight: 600;
+            transition: 0.4s;
+            padding-left: 50px;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .panel {
+            font-size: 20px;
+            padding: 0 20px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+            padding-left: 50px;
+        }
+        .grp,.grp1,.grp2,.grp3,.grp4{
+            transition: 0.7s;
+        }
+        .grp:hover{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);transform: matrix(1.2, 0, 0, 1.2, 0, 0);
+        }
+        .grp1:hover{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);transform: matrix(1.2, 0, 0, 1.2, 0, 0);
+        }
+        .grp2:hover{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);transform: matrix(1.2, 0, 0, 1.2, 0, 0);
+        }
+        .grp3:hover{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);transform: matrix(1.2, 0, 0, 1.2, 0, 0);
+        }
+        .grp4:hover{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);transform: matrix(1.2, 0, 0, 1.2, 0, 0);
+        }
+        .chatbot{
+            position: fixed;
+            top:300px;
+            left:50px;
+            height:150px;
+            width: 150px;
+            border-radius: 100px;
+            /* background-color: #fff; */
+            background-image: url(chatbot_img.png);
+            background-size: contain;
+           
+           
+            transition: 1s;
+        }
+        .chatbot:hover{
+            height: 300px;
+            width: 300px;
+            background-image: url(chatbot_img.png);
+            background-size: cover;
+            background-color: white;
+        }
+        #string1{
+            position:absolute;
+            left: -1px;
+            width: 0px;
+            height: 0px;
+           background-color: #fff;
+            transition: 1s;
+            border: none;
+        }
+        .say{
+            position:absolute;
+            left: -1px;
+            width: 0px;
+            height: 0px;
+            background-color: #fff;
+            transition: 1s;
+            border: none;
+        }
+        .chatbot:hover #string1{
+            position: fixed;
+            top: 530px;
+            left: 100px;
+            width: 210px;
+            height: 20px;
+            border-radius: 5px;
+            background-color:white;
+            border: none;
+            font-weight: bold;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);transform: matrix(1.2, 0, 0, 1.2, 0, 0);
+
+        }
+        .chatbot:hover  .say{
+            position: fixed;
+            top: 565px;
+            left: 160px;
+            width:60px;
+            height: 20px;
+            background-color: #359381;
+            color: white;
+            border: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        /* @media screen and (min-width:200px) and (max-width:300px){
+
+            .header{height: 250px;width: 100%;background-color:black;}
+            .header .logo h2,.navigation{display: none;}
+
+			
+		}
+
+		@media screen and (min-width:300px) and (max-width:400px){
+			
+
+		}
+
+		@media screen and (min-width:400px) and (max-width:500px){
+			
+		}
+
+		@media screen and (min-width:500px) and (max-width:600px){
+			
+		}
+
+
+		@media screen and (min-width:600px) and (max-width:700px){
+			
+
+		}
+
+		@media screen and (min-width:700px) and (max-width:800px){
+			
+		}
+
+
+		@media screen and (min-width:800px) and (max-width:900px){
+			
+		}
+
+		@media screen and (min-width:900px) and (max-width:1000px){
+			
+
+		}
+
+		@media screen and (min-width:1000px) and (max-width:1100px){
+			
+
+		}
+
+		@media screen and (max-height:600px) and (max-width:1100px){
+			
+
+		} */
+    </style>
+
+<script language=javascript>
+    function stm1(){
+           var stm, givenstm;
+           stm = document.getElementById("string1").value;//stm is a variable which accept statement from user.
+                   var i,j;
+                   var temp_1 = [];
+                   var count = 0;
+                //    var today = new date();
+                //    var curr_time = today.getHour();
+                //    alert(curr_time);
+                //    alert(stm+"<br>");
+                const temp_str = {
+                                        'recycle':'We recycle waste collected from you.',
+                                        'environment':'By reducing the waste we can keep clean and safe our environment',
+                                        'protect':'To protect our nature.',
+                                        'awareness':'Be aware about waste management',
+                                        'reuseable':'we recycle waste collected from you and make reusable',
+                                        'paper':'from paper after recycling we create paper again',
+                                        'metal':'from metal after melting it we make it use again by melting and then giving it another shape',
+                                        'glass':'we create glass products from broken glasses collected from waste',
+                                        'outdoor':'we collect scrap or waste which is trown on roadside.',
+                                        'town':'in town side people burn waste and by doing it air pollution, soil pollution causes.',
+                                        'hazerdus':'waste is hazerdus for nature',
+                                        'support':'support us and support companies which are recycling waste',
+                                        'recyclingcompany':'we forward waste collected from you to these companies',
+                                        'product':'after recycling we produce reusable product'
+                };
+                
+                const dict_len = Object.keys(temp_str).length;
+          //       alert(temp_str.recycle+"<br>");
+          // for(i=0;i<dict_len;i++)
+          // {
+          //        // var temp = temp_str[i];
+          //        alert(temp_str.recycle+"<br>");
+          // }
+          for(let key in temp_str){
+                 if(stm.indexOf(key)>=0){
+                         if(temp_str.hasOwnProperty(key)){
+                               // value = temp_str[key];
+                               if(key=='recycle'){
+                                      if((stm.indexOf("why")>=0)||(stm.indexOf("Why")>=0)){
+                                             alert("To Protect Nature");
+                                      }
+                                      if((stm.indexOf("how")>=0)||(stm.indexOf("How")>=0)){
+                                             alert("By forwarding your waste or scrap to Recycling Companies");
+                                      }
+                                      if((stm.indexOf("where")>=0)||(stm.indexOf("Where")>=0)){
+                                             alert("In Recycling Companies");
+                                      }
+                               }
+                               if(key=='environment'){
+                                      
+                                      if(((stm.indexOf("how")>=0)||(stm.indexOf("How")>=0))&&((((stm.indexOf("save")>=0)||(stm.indexOf("Save")>=0))||((stm.indexOf("prevent")>=0)||(stm.indexOf("Prevent"))>=0))||((stm.indexOf("cause")>=0)||(stm.indexOf("causes")>=0)||(stm.indexOf("Causes")>=0)||(stm.indexOf("cause")>=0)))){
+                                             alert("We are going to collect scrap and reycle it which will REDUCE pollution");
+                                      }
+                                     
+                               }
+                               // (key=='')||
+                            //    if((key=='protect')||(key=='awareness')||(key=='reuseable')||(key=='paper')||(key=='metal')||(key=='glass')||(key=='outdoor')||(key=='town')||(key=='hazerdus')||(key=='support')||(key=='recyclingcompany')||(key=='product')){
+                            //          alert(temp_str[key]);
+                            //    }
+                            //    if((stm.indexOf("hi")>=0)||(stm.indexOf("Hi")>=0)||(stm.indexOf("hello")>=0)||(stm.indexOf("Hello")>=0)){
+                            //             // alert("Hello "); 
+                            //             if((curr_time>0)&&(curr_time<=11)){
+                            //                 alert("Hello , Good Morning");
+                            //             }
+                            //             else{
+                            //                 if((curr_time>11)&&(curr_time<=17)){
+                            //                     alert("Hello , Good Noon");
+                            //                 }
+                            //                 else{
+                            //                         if((curr_time>17)&&(curr_time<=23)){
+                            //                             alert("Hello , Good Evening");
+                            //                     }
+                            //                 }
+                            //             }
+                            //  }
+                        }
+                 }
+          }
+          //       for(i=0;i<dict_len;i++){
+          //        const temp = temp_str[i];
+          //           if(stm.indexOf(temp_str[i])>=0){
+          //               temp_1[count] = temp_str[i];
+          //               alert(temp_1[count]);
+          //               count++;
+          //           }
+          //       }
+          //       alert(temp_str['recycle']);
+          //       for(j=0;j<temp_1.length;j++){
+          //        alert(temp_str(temp_1[j])+"<br>");
+          //       }
+            }
+</script>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="header">
+
+            <div class="logo">
+                <!-- <h2>Trash To Treasure</h2> -->
+                <img src="weblogof.jpeg" height="70" width="70">
+               
+            </div>
+
+            <nav class="navigation">
+                <a href="#" class="active">Home</a>
+                <a href="Service.html">Service</a>
+                <!-- <a href="newmixed_buypage.php">Buy items</a> -->
+                <a href="contact.html   ">Contact Us</a>
+                <a href="login.php">Login</a>
+                
+            </nav>
+            <div id="google_translate_element"></div> 
+
+        </header>
+
+        <div class="logo1">
+            <h2>Trash To Treasure</h2>
+           
+        </div>
+
+
+        <div class="parallax">
+
+            <img src="hill1.png" id="hill1" style=" width: 100%;
+            height: auto;">
+            <img src="hill2.png" id="hill2" style=" width: 100%;
+            height: auto;">
+            <img src="hill3.png" id="hill3" style=" width: 100%;
+            height: auto;">
+            <img src="hill4.png" id="hill4" style=" width: 100%;
+            height: auto;">
+            <img src="hill5.png" id="hill5" style=" width: 100%;
+            height: auto;">
+            <img src="tree.png" id="tree" style=" width: 100%;
+            height: auto;">
+            <img src="leaf.png" id="leaf" style=" width: 100%;
+            height: auto;">
+            <h2 id="text">Trash To Treasure</h2>
+            <img src="plant.png" id="plant" style=" width: 100%;
+            height: auto;">
+
+        </div>
+
+        <div class="sec">
+
+            <div>
+                <img class="grp" src="group.webp" height="450px" width="450px">
+            </div>
+            <!-- 
+            <h2>
+                T2T
+            </h2> -->
+
+            <p>
+                Raising awareness about the detrimental effects of throwing waste in water bodies is essential for preserving aquatic ecosystems and safeguarding human health. Waste, especially plastics and non-biodegradable materials, poses significant threats to marine habitats, wildlife, and water quality. By polluting waterways and contaminating drinking water sources, discarded waste not only endangers aquatic life but also poses risks to human health, including the spread of waterborne diseases and exposure to toxic chemicals. Additionally, the persistence of plastics in marine environments exacerbates the problem, as these materials break down into harmful microplastics that can enter the food chain. Encouraging responsible waste disposal practices, supporting recycling initiatives, and promoting community action are essential steps in mitigating water pollution and fostering a culture of environmental stewardship.
+            </p>
+
+        </div>
+
+        <div class="sec">
+
+            <div>
+                <img src="re.jpg" class="grp1" height="450px" width="450px" >
+            </div>
+            <!-- 
+            <h2>
+                T2T
+            </h2> -->
+
+            <p>
+                Raising awareness about the importance of not throwing waste on roads is essential for maintaining cleanliness, preserving environmental integrity, and ensuring public health and safety. Discarded waste on roads not only creates unsightly and unpleasant surroundings but also poses serious hazards to both humans and wildlife. Littering contributes to environmental pollution, as waste can be carried by wind and rain into waterways, harming aquatic ecosystems and contaminating soil. Additionally, roadside litter can attract pests and vermin, increasing the risk of disease transmission and creating safety hazards for motorists and pedestrians. By educating individuals about the negative impacts of littering, promoting responsible waste disposal practices, and fostering a sense of civic pride and responsibility, we can work towards cleaner, safer, and more sustainable communities for everyone to enjoy.
+            </p>
+
+        </div>
+
+        <div class="sec1" style="display: grid;">
+
+            <h2 class="para">Sell Your Scrab here In 3 easy step</h2>
+
+            <div class="imgre">
+                <img src="mover1.png" class="grp2" id="mover1">
+                <!-- <p style="padding-left: 85px;">Book An Appoinment</p> -->
+                <!-- <img src="mover4.png" width="225">
+                <img src="mover3.png"> -->
+
+
+
+
+                <img src="mover4.png" class="grp3" width="225">
+                <!-- <p style="padding-left: 85px;">Book An Appoinment</p> -->
+
+
+
+
+
+
+                <img src="mover3.png" class="grp4">
+                <!-- <p style="padding-left: 85px;">Book An Appoinment</p>-->
+            </div>
+
+
+
+        </div>
+
+
+        <!-- <section class="sec">
+
+            <div class="grp2">
+
+               
+
+               
+
+              
+            
+
+                <p>
+                    <b> Q: Is composting easy to do at home? </b><br>
+                <p> Yes, many methods exist, from countertop bins to outdoor compost piles.
+
+                    Community & Business:
+
+                </p><br><br>
+
+                <p>
+                    <b> Q:What does my city/town do with waste? </b><br>
+                <p>  Research local programs for recycling, composting, hazardous waste disposal.
+
+                </p><br><br>
+
+            </div> -->
+
+
+        <!-- 
+            <h2>
+                T2T
+            </h2> -->
+
+        <!-- </section> -->
+
+
+
+        <button class="accordion">Q: What are the different types of waste management?</button>
+        <div class="panel">
+            <p>Recycling, composting, landfilling, incineration, waste-to-energy, hazardous waste disposal.</p>
+        </div>
+
+        <button class="accordion">Q:Why is waste management important</button>
+        <div class="panel">
+            <p>Protects the environment, public health, conserves resources, reduces climate change impacts.</p>
+        </div>
+
+        <button class="accordion"> Q:What are the biggest challenges in waste management?</button>
+        <div class="panel">
+            <p>Increasing waste generation, limited landfill space, contamination, public awareness & participation.</p>
+        </div>
+
+        <button class="accordion">Q:How can I reduce waste at home?</button>
+        <div class="panel">
+            <p>Buy less, choose reusable items, compost food scraps, avoid single-use plastics</p>
+        </div>
+
+        <button class="accordion">Q:What can I recycle in my community?</button>
+        <div class="panel">
+            <p>Check local guidelines, common items include paper, metal, glass, plastic (types vary).</p>
+        </div>
+
+        <button class="accordion"> Q: Is composting easy to do at home?</button>
+        <div class="panel">
+            <p> Yes, many methods exist, from countertop bins to outdoor compost piles.
+
+                Community & Business:
+                .</p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <span class="phone-number"><a href="tel:+6954558"
+                            style="text-decoration: none; color: white;">Contact Us :9575558569</a></span>
+                    <span class="email"><a href="mailto:contact@example.com"
+                            style="text-decoration: none; color: white;">Email :sa85884710gmail.com</a></span>
+                </div>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/your-business" class="facebook"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.twitter.com/your-business" class="twitter"><i
+                            class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/your-business" class="instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <a href="about.html" style="text-decoration: none; color: white; font-size: 1.2rem; ">About Us</a>
+            <div class="copyright">
+                &copy; 2024 Trash To Treasure. All Rights Reserved.
+            </div>
+        </footer>
+        <!-- <div class="chatbot">
+            <p class="chattxt"></p>
+            <form>
+                <input type="text" id="string1">
+                <input type="button" class="say" value="SAY" onclick="stm1()">
+            </form>
+        </div> -->
+
+        <script src="script.js"></script>
+        <script src="script.js"></script>
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        } 
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/4cbb7811-b1bd-4593-883a-48f4a7faef68/webchat/config.js" defer></script>
+</div>
+</body>
+
+</html>

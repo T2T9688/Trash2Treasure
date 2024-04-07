@@ -1,0 +1,112 @@
+<html>
+
+<head>
+       <script language=javascript>
+              function stm1()
+       /* From here we aee going to call a function.
+       This function get called after clicking "say" button*/ {
+                     var stm, givenstm;
+                     stm = form1.statement1.value;//stm is a variable which accept statement from user.
+                     givenstm = ["Hi", "Good morning", "Lets start work", "Can you help me", "What is time now", "Ok", "Give your introduction", "Good night", "add the numbers that i am saying", "Ok thanks", "Who i am", "Lets go", "lets open goole", "I am coming", "Ok Bye", "Do you know", "Please tell me the table", "Thanks", "How many minutes I worked", "I am scared", "What are the different types of waste management?", "Recycling, composting, landfilling, incineration, waste-to-energy, hazardous waste disposal.", "Why is waste management important?", " Protects the environment, public health, conserves resources, reduces climate change impacts.", " What are the biggest challenges in waste management?", " Increasing waste generation, limited landfill space, contamination, public awareness & participation.", "How can I reduce waste at home?", "Buy less, choose reusable items, compost food scraps, avoid single-use plastics.", " What can I recycle in my community?", " Check local guidelines, common items include paper, metal, glass, plastic (types vary).", "Is composting easy to do at home?", "Yes, many methods exist, from countertop bins to outdoor compost piles.", "What does my city/town do with waste?", "Research local programs for recycling, composting, hazardous waste disposal.", "How can I support businesses that are sustainable?", "Look for companies with recycling initiatives, reduced packaging, eco-friendly products", "What can I do to advocate for better waste management in my community?", ": Contact local representatives, join community groups, spread awareness through education.", " How do I dispose of electronic waste (e- waste)?", "Many electronics retailers and municipalities offer e-waste drop-off programs.", " What about hazardous waste like paint or batteries?", "Special collection events or designated facilities handle hazardous waste disposal.", "I live in an apartment, can I still recycle/compost?", "Yes, many apartment buildings offer recycling programs, and indoor composting options exist."];
+                     if (stm == givenstm[0]) {
+                            alert("Hello sir.");
+                     }
+                     if (stm == givenstm[1]) {
+                            alert("Good morning sir 😊")
+                     }
+                     if (stm == givenstm[2]) {
+                            alert("Ok sir.Lets start");
+                            alert("From where we start sir");
+                     }
+                     if (stm == givenstm[3]) {
+                            alert("Yes sir");
+                     }
+                     if (stm == givenstm[4]) {
+                            var today = new Date();
+                            var hour = today.getHours();
+                            var minutes = today.getMinutes();
+                            var seconds = today.getSeconds();
+                            alert(hour + ":" + minutes + ":" + seconds)
+                     }
+                     if (stm == givenstm[5]) {
+                            alert("ok sir");
+                     }
+                     if (stm == givenstm[6]) {
+                            alert("ok sir.I am a AI(Artificial Intelligence).I made by Shubham kumbhar(Div.L Roll no.35) on 1 January 2022.I had made by a simple Javascript code.");
+                            /* I am giving this introdution in code
+                             because it is proof of that this code
+                             is not copied by any website on chrome.
+                             I formed this Artificial intelligence myself.
+                             */
+                     }
+                     if (stm == givenstm[7]) {
+                            alert("Good night sir.Take care")
+                     }
+                     if (stm == givenstm[8]) {
+                            var num1, num2, num3;
+                            num1 = parseInt(prompt("Enter 1st number"));
+                            num2 = parseInt(prompt("Enter 2nd number"));
+                            num3 = num1 + num2;
+                            alert(num3);
+                     }
+                     if (stm == givenstm[9]) {
+                            alert("Welcome sir 😌")
+                     }
+                     if (stm == givenstm[10]) {
+                            alert("You are Shubham")
+                     }
+                     if (stm == givenstm[11]) {
+                            alert("ok sir");
+                     }
+                     if (stm == givenstm[13]) {
+                            alert("ok sir then Let we talk later")
+                     }
+                     if (stm == givenstm[14]) {
+                            alert("Bye sir.👋🏻 Take care😌🤝🏻")
+                     }
+                     if (stm == givenstm[15]) {
+                            alert("What sir");
+                     }
+                     if (stm == givenstm[16]) {
+                            var a = parseInt(prompt(" Ok sir please Enter the number"));
+                            for (i = 1; i <= 10; i++) {
+                                   document.write(a * i + "<br>")
+                            }
+                     }
+                     if (stm == givenstm[17]) {
+                            alert("Welcome sir 🙂");
+                     }
+                     if (stm == givenstm[19]) {
+                            alert("Don't scare. I am with you");
+                     }
+              }
+       </script>
+</head>
+
+<body>
+       <h1 align="center">SAKHI</h1>
+       <form name="form1">
+              What you want to say:<input type="text" name="statement1"><br>
+              <input type="button" value="say" onclick="stm1()">
+       </form>
+       <script>
+              function workingTime() {
+                     var countTime = new Date();
+                     var Time = countTime.getMinutes();
+              }
+              function workingTime1() {
+                     var countTime = new Date();
+                     var Time1 = countTime.getMinutes()
+              }
+
+              if (stm == givenstm[18]) {
+                     var countTime = new Date();
+                     var Time = countTime.getMinutes();
+                     var Time1 = countTime.getMinutes();
+                     var TotalTime = Time - Time1;
+                     alert("You worked " + TotalTime + "minutes")
+              }
+       </script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virtual I2C 16x2 Display</title>
+<style>
+    /* CSS styles */
+    .container {
+        width: 320px;
+        background-color: #202124;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .cell {
+        width: 20px;
+        height: 20px;
+        background-color: #444;
+        border: 1px solid #333;
+        margin: 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: monospace;
+        color: #ddd;
+        font-size: 14px;
+    }
+
+    .cell span {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .cursor {
+        animation: blink-animation 1s steps(2, start) infinite;
+    }
+
+    @keyframes blink-animation {
+        to {
+            visibility: hidden;
+        }
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        margin-top: 10px;
+        box-sizing: border-box;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="cell" id="00"><span></span></div>
+            <div class="cell" id="01"><span></span></div>
+            <div class="cell" id="02"><span></span></div>
+            <div class="cell" id="03"><span></span></div>
+            <div class="cell" id="04"><span></span></div>
+            <div class="cell" id="05"><span></span></div>
+            <div class="cell" id="06"><span></span></div>
+            <div class="cell" id="07"><span></span></div>
+            <div class="cell" id="08"><span></span></div>
+            <div class="cell" id="09"><span></span></div>
+            <div class="cell" id="010"><span></span></div>
+            <div class="cell" id="011"><span></span></div>
+            <div class="cell" id="012"><span></span></div>
+            <div class="cell" id="013"><span></span></div>
+            <div class="cell" id="014"><span></span></div>
+            <div class="cell" id="015"><span></span></div>
+        </div>
+        <div class="row">
+            <div class="cell" id="10"><span></span></div>
+            <div class="cell" id="11"><span></span></div>
+            <div class="cell" id="12"><span></span></div>
+            <div class="cell" id="13"><span></span></div>
+            <div class="cell" id="14"><span></span></div>
+            <div class="cell" id="15"><span></span></div>
+            <div class="cell" id="16"><span></span></div>
+            <div class="cell" id="17"><span></span></div>
+            <div class="cell" id="18"><span></span></div>
+            <div class="cell" id="19"><span></span></div>
+            <div class="cell" id="110"><span></span></div>
+            <div class="cell" id="111"><span></span></div>
+            <div class="cell" id="112"><span></span></div>
+            <div class="cell" id="113"><span></span></div>
+            <div class="cell" id="114"><span></span></div>
+            <div class="cell" id="115"><span></span></div>
+        </div>
+        <div class="cursor">
+            <div class="row">
+                <div class="cell" id="cursor0"><span>_</span></div>
+                <div class="cell" id="cursor1"><span></span></div>
+            </div>
+        </div>
+        <input type="text" id="textInput" placeholder="Enter text...">
+    </div>
+
+    <script>
+        // JavaScript code
+        // Define the size of the virtual display
+        const DISPLAY_ROWS = 2;
+        const DISPLAY_COLS = 16;
+
+        // Virtual display buffer
+        let display = [];
+
+        // Initialize the display
+        function initDisplay() {
+            // Clear the display buffer
+            display = Array.from({ length: DISPLAY_ROWS }, () => Array(DISPLAY_COLS).fill(' '));
+        }
+
+        // Function to clear the display
+        function clearDisplay() {
+            // Clear the display buffer
+            initDisplay();
+            updateDisplay();
+        }
+
+        // Function to write a character to the display buffer
+        function writeChar(row, col, character) {
+            // Check if row and column are within bounds
+            if (row >= 0 && row < DISPLAY_ROWS && col >= 0 && col < DISPLAY_COLS) {
+                display[row][col] = character;
+                updateDisplay();
+            }
+        }
+
+        // Function to update the display
+        function updateDisplay() {
+            // Update the display content
+            for (let row = 0; row < DISPLAY_ROWS; row++) {
+                for (let col = 0; col < DISPLAY_COLS; col++) {
+                    const cellId = row.toString() + col.toString();
+                    const cell = document.getElementById(cellId);
+                    cell.querySelector('span').textContent = display[row][col];
+                }
+            }
+        }
+
+        // Initialize the display
+        initDisplay();
+
+        // Example usage: Write "Hello, World!" to the display
+        const message = "Hello, World!";
+        for (let i = 0; i < message.length; i++) {
+            writeChar(0, i, message[i]);
+        }
+
+        // Get the input field
+        const inputField = document.getElementById('textInput');
+
+        // Add event listener for input change
+        inputField.addEventListener('input', () => {
+            const input = inputField.value;
+            clearDisplay();
+            for (let i = 0; i < Math.min(input.length, DISPLAY_COLS); i++) {
+                writeChar(0, i, input[i]);
+            }
+        });
+    </script>
+</body>
+</html>
