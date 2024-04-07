@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f9f9f9;
+    height: auto;
+    overflow-x: hidden;
+}
+
+header {
+
+    position: absolute;
+    /* top:0;
+    left:0; */
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+
+    font-size: 1.5em;
+    color: #359381;
+    pointer-events: none;
+    margin-right: 100px;
+}
+
+.navigation a {
+
+    text-decoration: none;
+    color: #359381;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 15px;
+    font-weight: 700;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    background: #359381;
+    color: white;
+
+}
+
+.parallax {
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#text {
+    position: absolute;
+    font-size: 5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgbs(0, 0, 0, .2);
+}
+
+.parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.sec {
+    position: relative;
+    background: #003329;
+    /* background: #eee;   */
+    padding: 100px;
+    display: flex;
+    
+
+}
+
+.sec1 {
+    position: relative;
+    background: #fff;
+    /* background: white;  */
+    padding: 100px;
+    display: flex;
+
+
+}
+
+
+.sec h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 80px;
+}
+
+.sec p {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 400;
+    margin-left: 80px;
+}
+
+@media screen and (max-width:600px) {
+
+    .sec h2 {
+        font-size: 2.5rem;
+    }
+
+    .sec p {
+        font-size: 1.2rem;
+    }
+
+
+}
+
+.grp {
+    color: black;
+}
+
+.para {
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.imgre img {
+
+    margin-left: 160px;
+    margin-top: 60px;
+    background: transparent;
+}
+
+
+footer {
+    background-color: #2e2e2e;
+    padding: 20px;
+    text-align: center;
+    height: 200px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info,
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info span {
+    margin-right: 10px;
+
+}
+
+.social-media a {
+    margin-right: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+.social-media a:hover {
+    color: #007bff;
+}
+
+.copyright {
+    font-size: 2rempx;
+    color: #888;
+    margin-top: 100px;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+
+@media screen and (max-width:200){
+    
+}

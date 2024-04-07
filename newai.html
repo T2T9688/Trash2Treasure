@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language=javascript>
+        function stm1(){
+               var stm, givenstm;
+               stm = document.getElementById("string1").value;//stm is a variable which accept statement from user.
+                       var i,j;
+                       var temp_1 = [];
+                       var count = 0;
+                       document.write(stm+"<br>");
+                    const temp_str = {
+                                          'recycle':'We recycle waste collected from you.',
+                                          'environment':'By reducing the waste we can keep clean and safe our environment',
+                    				'protect':'To protect our nature.',
+                    				'awareness':'Be aware about waste management',
+                    				'reuseable':'we recycle waste collected from you and make reusable',
+                    				'paper':'from paper after recycling we create paper again',
+                    				'metal':'from metal after melting it we make it use again by melting and then giving it another shape',
+                    				'glass':'we create glass products from broken glasses collected from waste',
+                    				'outdoor':'we collect scrap or waste which is trown on roadside.',
+                    				'town':'in town side people burn waste and by doing it air pollution, soil pollution causes.',
+                    				'hazerdus':'waste is hazerdus for nature',
+                    				'support':'support us and support companies which are recycling waste',
+                    				'recyclingcompany':'we forward waste collected from you to these companies',
+                    				'product':'after recycling we produce reusable product'
+                    };
+                    
+                    const dict_len = Object.keys(temp_str).length;
+              //       document.write(temp_str.recycle+"<br>");
+              // for(i=0;i<dict_len;i++)
+              // {
+              //        // var temp = temp_str[i];
+              //        document.write(temp_str.recycle+"<br>");
+              // }
+              for(let key in temp_str){
+                     if(stm.indexOf(key)>=0){
+                             if(temp_str.hasOwnProperty(key)){
+                                   // value = temp_str[key];
+                                   if(key=='recycle'){
+                                          if((stm.indexOf("why")>=0)||(stm.indexOf("Why")>=0)){
+                                                 document.write("To Protect Nature");
+                                          }
+                                          if((stm.indexOf("how")>=0)||(stm.indexOf("How")>=0)){
+                                                 document.write("By forwarding your waste or scrap to Recycling Companies");
+                                          }
+                                          if((stm.indexOf("where")>=0)||(stm.indexOf("Where")>=0)){
+                                                 document.write("In Recycling Companies");
+                                          }
+                                   }
+                                   if(key=='environment'){
+                                          
+                                          if(((stm.indexOf("how")>=0)||(stm.indexOf("How")>=0))&&((((stm.indexOf("save")>=0)||(stm.indexOf("Save")>=0))||((stm.indexOf("prevent")>=0)||(stm.indexOf("Prevent"))>=0))||((stm.indexOf("cause")>=0)||(stm.indexOf("causes")>=0)||(stm.indexOf("Causes")>=0)||(stm.indexOf("cause")>=0)))){
+                                                 document.write("We are going to collect scrap and reycle it which will REDUCE pollution");
+                                          }
+                                         
+                                   }
+                                   // (key=='')||
+                                   if((key=='protect')||(key=='awareness')||(key=='reuseable')||(key=='paper')||(key=='metal')||(key=='glass')||(key=='outdoor')||(key=='town')||(key=='hazerdus')||(key=='support')||(key=='recyclingcompany')||(key=='product')){
+                                         document.write(temp_str[key]);
+                                   }
+                                   if((stm.indexOf("hi")>=0)||(stm.indexOf("Hi")>=0)||(stm.indexOf("hello")>=0)||(stm.indexOf("Hello")>=0)){
+                                          a
+                                   }
+                            }
+                     }
+              }
+              //       for(i=0;i<dict_len;i++){
+              //        const temp = temp_str[i];
+              //           if(stm.indexOf(temp_str[i])>=0){
+              //               temp_1[count] = temp_str[i];
+              //               alert(temp_1[count]);
+              //               count++;
+              //           }
+              //       }
+              //       alert(temp_str['recycle']);
+              //       for(j=0;j<temp_1.length;j++){
+              //        document.write(temp_str(temp_1[j])+"<br>");
+              //       }
+                }
+ </script>
+</head>
+<body>
+    <body>
+        <h1>SAKHI</h1>
+        <form name="form1">
+               What you want to say:<input type="text" id="string1" name="statement1"><br>
+               <input type="button" value="say" onclick="stm1()">
+        </form>
+        <!-- <script>
+               function workingTime() {
+                      var countTime = new Date();
+                      var Time = countTime.getMinutes();
+               }
+               function workingTime1() {
+                      var countTime = new Date();
+                      var Time1 = countTime.getMinutes()
+               }
+ 
+               if (stm == givenstm[18]) {
+                      var countTime = new Date();
+                      var Time = countTime.getMinutes();
+                      var Time1 = countTime.getMinutes();
+                      var TotalTime = Time - Time1;
+                      alert("You worked " + TotalTime + "minutes")
+               }
+        </script> -->
+ </body>
+</body>
+</html>

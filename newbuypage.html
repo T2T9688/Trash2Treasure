@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trash To Treasure</title>
+
+    <link rel="stylesheet" href="styleforbuypage.css"> 
+
+    <link rel="icon" href="leaf.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/4cbb7811-b1bd-4593-883a-48f4a7faef68/webchat/config.js"
+        defer>
+    </script>
+        <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+        <!-- Header -->
+        <div class="container">
+            <div class="nav">
+                <div class="logo">Trash To Treasure</div>
+                <div class="bars">
+                    <a href="#" class="active">Home</a>
+                    <a href="Service.html">Service</a>
+                    <a href="contact.html   ">Contact Us</a>
+                    <a href="login.php">Login</a>
+                </div>
+                <div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count">0</p></div>
+            </div>
+            <div class="mainbuycontent">
+                <div class="container1">
+                    <div id="root"></div>
+                    <div class="sidebar">
+                        <div class="head"><p>My Cart</p></div>
+                        <div id="cartItem">Your Cart is Empty</div>
+                            <div class="foot">
+                                <h3>Total</h3>
+                                <h2 id="total">$ 0.00</h2>
+                            </div>
+                        <div class="foot2">
+                            <div id="inputContainer">
+                                <!-- Inputs will be dynamically added here -->
+                              </div>
+                              <div id="inputContainer1">
+                                <!-- Inputs will be dynamically added here -->
+                              </div>
+                            <form method="post" id="myForm" action="newbuypage_appip.php">
+                                
+                                <input type="hidden" style="display: none;" id="cartlen" name="cartlen">
+                                <input type="hidden" style="display: none;" id="cartlen1" name="cartlen1">
+                                <input type="hidden" style="display: none;" id="cartlen2" name="cartlen2">
+                                <input type="hidden" style="display: none;" id="cartlen3" name="cartlen3">
+                                <input type="hidden" style="display: none;" id="cartlen4" name="cartlen4">
+                                <input type="hidden" style="display: none;" id="cartlen5" name="cartlen5">
+                                <input type="button" value="Click" onclick="final_order()">
+                                <script>
+                                    function final_order(){
+                                        var no_of_options=cart.length;
+                                        document.getElementById("cartlen").value=no_of_options;
+                                        alert(no_of_options);
+                                        let ch1=1;
+                                        let j=1;
+                                        // for(i=0;i<no_of_options;i++){
+                                            // document.write("<input type='hidden' id=name='cart_element_fin"+i+"' style='display:none;' name='cart_element_fin"+i+"'>");
+                                            // document.getElementById("myForm").submit();
+                                            for(j=1;j<=no_of_options;j++){
+                                                // const inputContainer = document.getElementById('inputContainer1');
+
+                                                // // Loop through to create and append input tags
+                                                // // for (let i = 0; i < numberOfInputs; i++) {
+                                                //     // Create input element
+                                                // const input = document.createElement('input');
+
+                                                // // Set input type to text
+                                                // input.type = 'hidden';
+
+                                                // // Optionally, you can set other attributes like placeholder, name, id, etc.
+                                                // //input.placeholder = 'Enter value ' + (ch1 + 1);
+                                                // input.name = 'cart_element_fin1' + ch1;
+                                                // input.id = 'cart_element_fin' + ch1;
+                                                // input.style='display:none';
+                                                // input.value=document.getElementById("cart_element"+ch1).value;
+
+                                                // // Append input to the container
+                                                // inputContainer.appendChild(input);
+
+                                                // // Add some space between inputs
+                                                // inputContainer.appendChild(document.createElement('br'));
+                                                // alert(input.name);
+                                                // alert(input.id);
+                                                // var temp3 = document.getElementById("cart_element"+j).value;
+                                                // document.getElementById("cartlen"+j).value=temp3;
+                                                // alert(document.getElementById("cartlen"+j).value);
+                                                //setlist(("cartlen"+j),j);
+                                                // alert(document.getElementById("cartlen"+j).value);
+                                                //no_of_options--;
+
+                                                var temp3 = document.getElementById("cart_element"+(j-1)).value;
+                                                document.getElementById("cartlen"+j).value=temp3;
+                                                alert("cartlen"+j);
+                                                alert(document.getElementById("cartlen"+j).value);
+                                                alert("cart_element"+(j-1));
+                                                alert(document.getElementById("cart_element"+(j-1)).value);
+                                            }
+                                    //    }
+                                    }
+                                    function setlist(b,c){
+                                        
+                                        alert(b);
+                                        alert(c);
+                                    }
+                                </script>
+                                
+                                <input type="submit" name="placeorder" value="ORDER" >
+                            </form>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <script src="newaddtocart.js"></script>
+
+</body>
+</html>
+
