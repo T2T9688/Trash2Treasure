@@ -44,10 +44,6 @@ If you'd like to contribute to this project, please follow these guidelines:
 4. Push your changes to your fork: `git push origin feature/my-feature`.
 5. Open a pull request against the `main` branch of this repository.
 
-## License
-
-This project is licensed under the [insert license, e.g., MIT License]. See the `LICENSE` file for details.
-
 
 ## Contact
 
